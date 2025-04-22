@@ -16,8 +16,8 @@
         <TargetCommonOption>
           <Device>STM32F103ZE</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F1xx_DFP.2.3.0</PackID>
-          <PackURL>http://www.keil.com/pack/</PackURL>
+          <PackID>Keil.STM32F1xx_DFP.2.4.1</PackID>
+          <PackURL>https://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x2000FFFF) IROM(0x8000000-0x807FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -138,7 +138,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2V8M.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers;..\SmartDevice\CAL;..\SmartDevice\KAL;..\SmartDevice\Input_System;..\SmartDevice\Unit_Test</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -517,6 +517,71 @@
               <FileName>ring_buffer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\ModuleDrivers\ring_buffer.c</FilePath>
+            </File>
+            <File>
+              <FileName>driver_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ModuleDrivers\driver_key.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>kal</GroupName>
+          <Files>
+            <File>
+              <FileName>kal_gpio_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\KAL\kal_gpio_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>kal_time.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\KAL\kal_time.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>cal</GroupName>
+          <Files>
+            <File>
+              <FileName>cal_gpio_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\CAL\cal_gpio_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>cal_time.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\CAL\cal_time.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>input</GroupName>
+          <Files>
+            <File>
+              <FileName>Gpio_Key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Input_System\Gpio_Key.c</FilePath>
+            </File>
+            <File>
+              <FileName>Input_Buffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Input_System\Input_Buffer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Input_System.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Input_System\Input_System.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>unittest</GroupName>
+          <Files>
+            <File>
+              <FileName>input_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Unit_Test\input_test.c</FilePath>
             </File>
           </Files>
         </Group>

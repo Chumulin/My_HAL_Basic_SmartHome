@@ -2,7 +2,7 @@
 #define __INPUT_SYSTEM_H
 
 #define TIME_T int
-#define INPUT_BUF_LEN 1024
+#define INPUT_BUF_LEN 20
 
 typedef enum
 {
@@ -30,7 +30,10 @@ typedef struct InputDevice{
 	struct InputDevice *pNext;
 }InputDevice, *PInputDevice;
 
+void AddInputDevices(void);
+void InitInputDevices(void);
+void InputDeviceRegister(PInputDevice ptInputDevice);
+
+
 
 #endif /* __INPUT_SYSTEM_H */
-
-

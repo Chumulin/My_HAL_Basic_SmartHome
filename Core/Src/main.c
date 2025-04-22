@@ -21,6 +21,7 @@
 #include "main.h"
 #include "usart.h"
 #include "gpio.h"
+#include "input_test.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -71,8 +72,6 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 
-    char c = 0;
-    
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -111,12 +110,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    c = getchar();
-    if(c != 0)
-    {
-        printf("%c", c);
-        c = 0;
-    }
+		input_test();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

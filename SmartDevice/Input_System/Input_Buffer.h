@@ -1,9 +1,15 @@
 #ifndef __INPUT_BUFFER_H
 #define __INPUT_BUFFER_H
 
+#include "input_system.h"
+
+#ifndef NULL
+#define NULL (void*)0
+#endif
+
 #include "Input_System.h"
 
-#define BUFFER_SIZE 10        /* 环形缓冲区的大小 */
+#define BUFFER_SIZE 20        /* 环形缓冲区的大小 */
 typedef struct
 {
     InputEvent buffer[BUFFER_SIZE];  /* 缓冲区空间 */

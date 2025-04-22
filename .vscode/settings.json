@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "kal_gpio_key.h": "c",
+        "driver_key.h": "c",
+        "cal_gpio_key.h": "c",
+        "cal_time.h": "c",
+        "kal_time.h": "c",
+        "input_buffer.h": "c"
+    }
+}

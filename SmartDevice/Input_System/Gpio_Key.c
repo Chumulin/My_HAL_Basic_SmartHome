@@ -1,11 +1,20 @@
-#include "Input_System.h"
-#include "Input_Buffer.h"
+#include "Gpio_Key.h"
 
-static InputDevice g_t_Key_Device={
+static int GPIOKeyInit(void)
+{
+	KAL_KeyInit();
+	return 0;
+}
+
+static InputDevice g_t_Key_Device=
+{
 	"gpio_key",
 	NULL,
-	int (*DeviceInit)(void);
-	int (*DeviceExit)(void);
-	struct InputDevice *pNext;
-	}
+	GPIOKeyInit,
+	NULL,
+};
 
+void AddInputDeviceGPIOKey(void)
+{
+	InputDeviceRegister(&g_t_Key_Device);
+}
