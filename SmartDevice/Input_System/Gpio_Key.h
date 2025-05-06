@@ -1,6 +1,7 @@
 #ifndef __GPIO_KEY_H
 #define __GPIO_KEY_H
 
+#include <stdio.h>
 #include "Input_System.h"
 #include "Input_Buffer.h"
 #include "kal_gpio_key.h"

@@ -1,10 +1,10 @@
-#include "input_buffer.h"
+#include "Input_Buffer.h"
 
 static InputEventBuffer g_tInputBuffer;
 
 int PutInputEvent(PInputEvent ptInputEvent)
 {
-    int i = (g_tInputBuffer.pW + 1) % BUFFER_SIZE;
+    int i = (g_tInputBuffer.pW + 1) % INPUT_BUFFER_SIZE;
 
 
 	if(!ptInputEvent)
@@ -31,7 +31,7 @@ int GetInputEvent(PInputEvent ptInputEvent)
     else
     {
         *ptInputEvent = g_tInputBuffer.buffer[g_tInputBuffer.pR];
-        g_tInputBuffer.pR = (g_tInputBuffer.pR + 1) % BUFFER_SIZE;
+        g_tInputBuffer.pR = (g_tInputBuffer.pR + 1) % INPUT_BUFFER_SIZE;
         return 0;
     }
 }

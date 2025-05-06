@@ -29,6 +29,7 @@ f103_moduel\driver_key.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flas
 f103_moduel\driver_key.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 f103_moduel\driver_key.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 f103_moduel\driver_key.o: ..\SmartDevice\Input_System\gpio_key.h
+f103_moduel\driver_key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 f103_moduel\driver_key.o: ..\SmartDevice\Input_System\Input_Buffer.h
 f103_moduel\driver_key.o: ..\SmartDevice\KAL\kal_gpio_key.h
 f103_moduel\driver_key.o: ..\SmartDevice\CAL\cal_gpio_key.h

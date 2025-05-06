@@ -1,5 +1,6 @@
 f103_moduel\gpio_key.o: ..\SmartDevice\Input_System\Gpio_Key.c
 f103_moduel\gpio_key.o: ..\SmartDevice\Input_System\Gpio_Key.h
+f103_moduel\gpio_key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 f103_moduel\gpio_key.o: ..\SmartDevice\Input_System\Input_System.h
 f103_moduel\gpio_key.o: ..\SmartDevice\Input_System\Input_Buffer.h
 f103_moduel\gpio_key.o: ..\SmartDevice\KAL\kal_gpio_key.h

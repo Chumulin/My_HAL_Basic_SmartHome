@@ -31,6 +31,6 @@ f103_moduel\main.o: ../Core/Inc/usart.h
 f103_moduel\main.o: ../Core/Inc/gpio.h
 f103_moduel\main.o: ..\SmartDevice\Unit_Test\input_test.h
 f103_moduel\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-f103_moduel\main.o: ..\SmartDevice\Input_System\input_system.h
-f103_moduel\main.o: ..\SmartDevice\Input_System\input_buffer.h
+f103_moduel\main.o: ..\SmartDevice\Input_System\Input_System.h
+f103_moduel\main.o: ..\SmartDevice\Input_System\Input_Buffer.h
 f103_moduel\main.o: ..\ModuleDrivers\driver_usart.h

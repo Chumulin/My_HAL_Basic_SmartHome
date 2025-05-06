@@ -28,4 +28,4 @@ f103_moduel\cal_gpio_key.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_fl
 f103_moduel\cal_gpio_key.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 f103_moduel\cal_gpio_key.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 f103_moduel\cal_gpio_key.o: ..\SmartDevice\Input_System\Input_Buffer.h
-f103_moduel\cal_gpio_key.o: ..\SmartDevice\Input_System\input_system.h
+f103_moduel\cal_gpio_key.o: ..\SmartDevice\Input_System\Input_System.h

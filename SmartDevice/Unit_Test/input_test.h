@@ -2,8 +2,8 @@
 #define __INPUT_TEST_H
 
 #include <stdio.h>
-#include "input_system.h"
-#include "input_buffer.h"
+#include "Input_System.h"
+#include "Input_Buffer.h"
 
 void input_test(void);
 
