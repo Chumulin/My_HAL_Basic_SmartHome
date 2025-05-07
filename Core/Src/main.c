@@ -18,16 +18,18 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <stdio.h>
 #include "main.h"
 #include "usart.h"
 #include "gpio.h"
 #include "input_test.h"
-
+#include "driver_usart.h"
+#include "led_test.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "driver_usart.h"
 
-#include <stdio.h>
+
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -100,8 +102,8 @@ int main(void)
   ring_buffer_init(&test_buffer);
   
   // 使能USART1的中断
-    EnableDebugIRQ();
-    printf("Hello World!\r\n");
+	EnableDebugIRQ();
+	printf("Hello World!\r\n");
 
   /* USER CODE END 2 */
 
@@ -110,7 +112,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		input_test();
+		led_test();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

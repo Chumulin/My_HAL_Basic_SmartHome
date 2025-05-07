@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers;..\SmartDevice\CAL;..\SmartDevice\KAL;..\SmartDevice\Input_System;..\SmartDevice\Unit_Test</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers;..\SmartDevice\CAL;..\SmartDevice\KAL;..\SmartDevice\Input_System;..\SmartDevice\Unit_Test;..\SmartDevice\Device</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -523,6 +523,11 @@
               <FileType>1</FileType>
               <FilePath>..\ModuleDrivers\driver_key.c</FilePath>
             </File>
+            <File>
+              <FileName>driver_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ModuleDrivers\driver_led.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -538,6 +543,11 @@
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\KAL\kal_time.c</FilePath>
             </File>
+            <File>
+              <FileName>kal_led_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\KAL\kal_led_device.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -552,6 +562,11 @@
               <FileName>cal_time.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\CAL\cal_time.c</FilePath>
+            </File>
+            <File>
+              <FileName>cal_led_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\CAL\cal_led_device.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -582,6 +597,21 @@
               <FileName>input_test.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Unit_Test\input_test.c</FilePath>
+            </File>
+            <File>
+              <FileName>led_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Unit_Test\led_test.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>device</GroupName>
+          <Files>
+            <File>
+              <FileName>led_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Device\led_device.c</FilePath>
             </File>
           </Files>
         </Group>
