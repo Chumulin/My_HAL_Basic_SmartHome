@@ -473,7 +473,7 @@
 
   <Group>
     <GroupName>Drivers/CMSIS</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -648,8 +648,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\SmartDevice\Input_System\Gpio_Key.c</PathWithFileName>
-      <FilenameWithoutPath>Gpio_Key.c</FilenameWithoutPath>
+      <PathWithFileName>..\SmartDevice\Input_System\gpio_key.c</PathWithFileName>
+      <FilenameWithoutPath>gpio_key.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -660,8 +660,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\SmartDevice\Input_System\Input_Buffer.c</PathWithFileName>
-      <FilenameWithoutPath>Input_Buffer.c</FilenameWithoutPath>
+      <PathWithFileName>..\SmartDevice\Input_System\input_buffer.c</PathWithFileName>
+      <FilenameWithoutPath>input_buffer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -672,8 +672,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\SmartDevice\Input_System\Input_System.c</PathWithFileName>
-      <FilenameWithoutPath>Input_System.c</FilenameWithoutPath>
+      <PathWithFileName>..\SmartDevice\Input_System\input_system.c</PathWithFileName>
+      <FilenameWithoutPath>input_system.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

@@ -1,5 +1,5 @@
-#include "Input_System.h"
-#include "Gpio_Key.h"
+#include "input_system.h"
+#include "gpio_key.h"
 
 static PInputDevice g_ptInputDevices;
 

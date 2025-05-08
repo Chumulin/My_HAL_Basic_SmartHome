@@ -574,19 +574,19 @@
           <GroupName>input</GroupName>
           <Files>
             <File>
-              <FileName>Gpio_Key.c</FileName>
+              <FileName>gpio_key.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SmartDevice\Input_System\Gpio_Key.c</FilePath>
+              <FilePath>..\SmartDevice\Input_System\gpio_key.c</FilePath>
             </File>
             <File>
-              <FileName>Input_Buffer.c</FileName>
+              <FileName>input_buffer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SmartDevice\Input_System\Input_Buffer.c</FilePath>
+              <FilePath>..\SmartDevice\Input_System\input_buffer.c</FilePath>
             </File>
             <File>
-              <FileName>Input_System.c</FileName>
+              <FileName>input_system.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\SmartDevice\Input_System\Input_System.c</FilePath>
+              <FilePath>..\SmartDevice\Input_System\input_system.c</FilePath>
             </File>
           </Files>
         </Group>

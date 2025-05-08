@@ -1,7 +1,7 @@
 #ifndef __INPUT_BUFFER_H
 #define __INPUT_BUFFER_H
 
-#include "Input_System.h"
+#include "input_system.h"
 
 #define INPUT_BUFFER_SIZE 10        /* 环形缓冲区的大小 */
 typedef struct
