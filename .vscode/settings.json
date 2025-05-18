@@ -5,6 +5,11 @@
         "cal_gpio_key.h": "c",
         "cal_time.h": "c",
         "kal_time.h": "c",
-        "input_buffer.h": "c"
+        "input_buffer.h": "c",
+        "display_device.h": "c",
+        "driver_oled.h": "c",
+        "config.h": "c",
+        "input_test.h": "c",
+        "driver_usart.h": "c"
     }
 }

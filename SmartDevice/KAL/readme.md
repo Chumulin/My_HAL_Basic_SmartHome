@@ -1,0 +1,1 @@
+/* 用于区分软件上区别如裸机、FreeRTOS、RT-Thread、Linux等 */

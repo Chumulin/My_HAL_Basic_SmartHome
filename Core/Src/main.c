@@ -25,6 +25,7 @@
 #include "input_test.h"
 #include "driver_usart.h"
 #include "led_test.h"
+#include "diaplay_test.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -109,10 +110,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	display_test();
   while (1)
   {
     /* USER CODE END WHILE */
-		led_test();
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
