@@ -10,11 +10,11 @@
  *--------------------------------------------------
 */
 
+#include <stdio.h>
 #include "driver_usart.h"
 #include "usart.h"
 #include "main.h"
 #include "ring_buffer.h"
-#include <stdio.h>
 
 static volatile uint8_t txcplt_flag = 0;    // 发送完成标志，1完成0未完成
 static volatile uint8_t rxcplt_flag = 0;    // 接收完成标志，1完成0未完成

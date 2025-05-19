@@ -10,10 +10,10 @@
  *--------------------------------------------------
 */
 
-#include <input_system.h>
-#include <kal_time.h>
-#include <gpio_key.h>
-#include <input_buffer.h>
+#include "input_system.h"
+#include "kal_time.h"
+#include "gpio_key.h"
+#include "input_buffer.h"
 #include "driver_key.h"
 
 static volatile uint8_t key1_val = KEY_RELEASED;     // 按键KEY1的键值，按下为0松开为1

@@ -4,7 +4,7 @@
 
 
 #define LED_WHITE 	0
-#define LED_BLUE 	  1
+#define LED_BLUE 	1
 #define LED_GREEN 	2
 
 
