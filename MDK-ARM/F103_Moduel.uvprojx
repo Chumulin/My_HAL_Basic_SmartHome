@@ -543,6 +543,11 @@
               <FileType>1</FileType>
               <FilePath>..\ModuleDrivers\ascii_font.c</FilePath>
             </File>
+            <File>
+              <FileName>driver_fan.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ModuleDrivers\driver_fan.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -568,6 +573,11 @@
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\KAL\kal_oled_device.c</FilePath>
             </File>
+            <File>
+              <FileName>kal_fan_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\KAL\kal_fan_device.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -592,6 +602,11 @@
               <FileName>cal_oled_device.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\CAL\cal_oled_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>cal_fan_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\CAL\cal_fan_device.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -633,6 +648,11 @@
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Unit_Test\diaplay_test.c</FilePath>
             </File>
+            <File>
+              <FileName>fan_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Unit_Test\fan_test.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -642,6 +662,11 @@
               <FileName>led_device.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Device\led_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>fan_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Device\fan_device.c</FilePath>
             </File>
           </Files>
         </Group>

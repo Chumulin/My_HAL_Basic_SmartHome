@@ -10,6 +10,7 @@
         "driver_oled.h": "c",
         "config.h": "c",
         "input_test.h": "c",
-        "driver_usart.h": "c"
+        "driver_usart.h": "c",
+        "kal_fan_device.h": "c"
     }
 }
