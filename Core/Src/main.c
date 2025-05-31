@@ -27,6 +27,7 @@
 #include "led_test.h"
 #include "diaplay_test.h"
 #include "fan_test.h"
+#include "text_test.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -106,7 +107,7 @@ int main(void)
   // 使能USART1的中断
 	EnableDebugIRQ();
 	printf("Hello World!\r\n");
-
+  text_test();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,7 +115,6 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		fan_test();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers;..\SmartDevice\CAL;..\SmartDevice\KAL;..\SmartDevice\Input_System;..\SmartDevice\Unit_Test;..\SmartDevice\Device;..\SmartDevice\Device\diaplay;..\SmartDevice\Config</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers;..\SmartDevice\CAL;..\SmartDevice\KAL;..\SmartDevice\Input_System;..\SmartDevice\Unit_Test;..\SmartDevice\Device;..\SmartDevice\Device\diaplay;..\SmartDevice\Config;..\SmartDevice\Font;..\SmartDevice\Text</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -539,11 +539,6 @@
               <FilePath>..\ModuleDrivers\driver_oled.c</FilePath>
             </File>
             <File>
-              <FileName>ascii_font.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\ModuleDrivers\ascii_font.c</FilePath>
-            </File>
-            <File>
               <FileName>driver_fan.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\ModuleDrivers\driver_fan.c</FilePath>
@@ -653,6 +648,11 @@
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Unit_Test\fan_test.c</FilePath>
             </File>
+            <File>
+              <FileName>text_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Unit_Test\text_test.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -697,6 +697,41 @@
               <FileName>oled_device.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Device\diaplay\oled_device.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>font</GroupName>
+          <Files>
+            <File>
+              <FileName>font_system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Font\font_system.c</FilePath>
+            </File>
+            <File>
+              <FileName>ascii_font.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Font\ascii_font.c</FilePath>
+            </File>
+            <File>
+              <FileName>font_manager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Font\font_manager.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>text</GroupName>
+          <Files>
+            <File>
+              <FileName>encoding.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Text\encoding.c</FilePath>
+            </File>
+            <File>
+              <FileName>show_text.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Text\show_text.c</FilePath>
             </File>
           </Files>
         </Group>

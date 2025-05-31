@@ -1,6 +1,7 @@
-#include "stm32f1xx_hal.h"
+#include <string.h>
+#include "font_manager.h"
 
-const uint8_t ascii_font[128][16] = {
+const unsigned char ascii_font[128][16] = {
 {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00},/*" ",0*/
 
 {0x00,0xFE,0x02,0x02,0x02,0x02,0x02,0x02,0x00,0x3F,0x20,0x20,0x20,0x20,0x20,0x20},/*"",1*/
@@ -257,3 +258,59 @@ const uint8_t ascii_font[128][16] = {
 
 {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}/*"",127*/
 };
+
+
+
+
+static void GetASCIIFontSize(int *piWidth,int *piHeigh)
+{
+    if (piWidth)
+    {
+		*piWidth = 8;
+    }
+    if (piHeigh)
+    {
+		*piHeigh = 16;
+    }
+}
+
+static int GetASCIIFontBitMap(unsigned int dwCode, PFontBitMap ptFontBitMap)
+{
+    int iWidth = 8;
+    int iHeigh = 16;
+    const unsigned char *dots = ascii_font[dwCode];
+    if(ptFontBitMap)
+    {
+        ptFontBitMap->iLeftUpX = ptFontBitMap->iCurOriginX;
+        ptFontBitMap->iLeftUpY = ptFontBitMap->iCurOriginY - iHeigh + 1;
+
+        ptFontBitMap->iNextOriginX = ptFontBitMap->iCurOriginX + iWidth;
+        ptFontBitMap->iNextOriginY = ptFontBitMap->iCurOriginY - iHeigh + 1;
+
+        ptFontBitMap->iWidth = iWidth;
+        ptFontBitMap->iRows  = iHeigh ;
+
+        if (!ptFontBitMap->pucBuffer)
+        ptFontBitMap->pucBuffer = (unsigned char *)dots;
+        else
+        memcpy(ptFontBitMap->pucBuffer, dots, 16);
+        return 0;
+    }
+    return -1;
+    
+}
+
+
+static FontLib g_ASCIIFontLib =
+{
+    "ascii",
+    NULL,
+    GetASCIIFontSize,
+    NULL,
+    GetASCIIFontBitMap,
+};
+
+void AddFontLibASCII(void)
+{
+    FontLibRegister(&g_ASCIIFontLib);
+}
