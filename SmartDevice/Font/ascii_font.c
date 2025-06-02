@@ -285,7 +285,7 @@ static int GetASCIIFontBitMap(unsigned int dwCode, PFontBitMap ptFontBitMap)
         ptFontBitMap->iLeftUpY = ptFontBitMap->iCurOriginY - iHeigh + 1;
 
         ptFontBitMap->iNextOriginX = ptFontBitMap->iCurOriginX + iWidth;
-        ptFontBitMap->iNextOriginY = ptFontBitMap->iCurOriginY - iHeigh + 1;
+        ptFontBitMap->iNextOriginY = ptFontBitMap->iCurOriginY ;
 
         ptFontBitMap->iWidth = iWidth;
         ptFontBitMap->iRows  = iHeigh ;

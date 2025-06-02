@@ -9,14 +9,14 @@
 
 void text_test(void)
 {
-    char *str = "www.100ask.net";
-    PDisplayDevice ptDevice;
+	char *str = "Heelo,World";
+	PDisplayDevice ptDevice;
 	char *display_name = "OLED";
-    char *font_name = "ascii";
-
-    AddFontLibs();
-    SetDefaultFontLib(font_name);
-    InitDefaultFontLib();
+	char *font_name = "ascii";
+	
+	AddFontLibs();
+	SetDefaultFontLib(font_name);
+	InitDefaultFontLib();
 
 	
 	AddDisplayDevices();
@@ -32,7 +32,6 @@ void text_test(void)
 
 	/* 2. 清除屏幕 */
 	memset(ptDevice->FBBase, 0, ptDevice->iSize);
-
-    ShowTextInDisplayDevice(ptDevice ,16, 15, str);
+	ShowTextInDisplayDevice(ptDevice ,16, 15, str);
 
 }

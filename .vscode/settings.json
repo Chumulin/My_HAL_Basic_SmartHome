@@ -12,6 +12,7 @@
         "input_test.h": "c",
         "driver_usart.h": "c",
         "kal_fan_device.h": "c",
-        "font_manager.h": "c"
+        "font_manager.h": "c",
+        "net_device.h": "c"
     }
 }

@@ -20,9 +20,9 @@ PDisplayDevice __GetDisplayDevice(char *name)
     while(pTmp)
     {
         if(strcmp(pTmp->name,  name) == 0)
-					return pTmp;
+			return pTmp;
         else
-					pTmp = pTmp->pNext;
+			pTmp = pTmp->pNext;
     }
     return NULL;
 
