@@ -36,6 +36,15 @@ void EnableDebugIRQ(void)
     __HAL_UART_ENABLE_IT(&huart1, UART_IT_TC | UART_IT_RXNE);   // 使能USRAT1的发送和接收中断
 }
 
+void EnableUART3IRQ(void)
+{
+    HAL_NVIC_SetPriority(USART3_IRQn, 0, 1);
+    HAL_NVIC_EnableIRQ(USART3_IRQn);
+    
+    __HAL_UART_ENABLE_IT(&huart3, UART_IT_RXNE); 
+}
+
+
 /*
  *  函数名：DisableDebugIRQ
  *  功能描述：失能USART1的中断
@@ -97,6 +106,44 @@ void USART1_IRQHandler(void)
     HAL_UART_IRQHandler(&huart1);   // HAL库中的UART统一中断服务函数，通过形参判断是要处理谁的中断
 }
 
+void USART3_IRQHandler(void)
+{
+	extern ring_buffer *GetUART3RingBuffer(void);
+	
+	static ring_buffer *uart3_ringbuffer = NULL;
+	unsigned char c = 0;
+	
+	if (!uart3_ringbuffer)
+		uart3_ringbuffer = GetUART3RingBuffer();
+	
+    if((USART3->SR &(1<<5)) != 0)
+    {
+        c = USART3->DR;
+        ring_buffer_write(c, uart3_ringbuffer);
+    }
+    HAL_UART_IRQHandler(&huart3);
+}
+
+/**********************************************************************
+ * 函数名称： USART3_SendBytes
+ * 功能描述： 通过UART3发出多个数据
+ * 输入参数： buf-数据缓冲区
+ * 输入参数： len-数据长度
+ * 输出参数： 无
+ * 返 回 值： 0-成功
+ * 修改日期       版本号     修改人	      修改内容
+ * -----------------------------------------------
+ * 2021/10/15	     V1.0	  韦东山	      创建
+ ***********************************************************************/
+void USART3_SendBytes(char *buf, int len)
+{
+	int i;
+	for (i = 0; i < len; i++)
+	{
+		while ((USART3->SR & (1<<7)) == 0);
+		USART3->DR = buf[i];		
+	}
+}
 /*
  *  函数名：HAL_UART_RxCpltCallback
  *  功能描述：HAL库中的UART接收完成回调函数

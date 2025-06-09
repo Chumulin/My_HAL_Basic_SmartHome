@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers;..\SmartDevice\CAL;..\SmartDevice\KAL;..\SmartDevice\Input_System;..\SmartDevice\Unit_Test;..\SmartDevice\Device;..\SmartDevice\Device\diaplay;..\SmartDevice\Config;..\SmartDevice\Font;..\SmartDevice\Text</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers;..\SmartDevice\CAL;..\SmartDevice\KAL;..\SmartDevice\Input_System;..\SmartDevice\Unit_Test;..\SmartDevice\Device;..\SmartDevice\Device\diaplay;..\SmartDevice\Config;..\SmartDevice\Font;..\SmartDevice\Text;..\SmartDevice\Net;..\SmartDevice\Net\at_command;..\SmartDevice\Device\uart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -573,6 +573,11 @@
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\KAL\kal_fan_device.c</FilePath>
             </File>
+            <File>
+              <FileName>kal_uart_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\KAL\kal_uart_device.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -602,6 +607,11 @@
               <FileName>cal_fan_device.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\CAL\cal_fan_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>cal_uart_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\CAL\cal_uart_device.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -653,6 +663,11 @@
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Unit_Test\text_test.c</FilePath>
             </File>
+            <File>
+              <FileName>net_test.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Unit_Test\net_test.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -667,6 +682,11 @@
               <FileName>fan_device.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Device\fan_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Device\uart\uart_device.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -732,6 +752,31 @@
               <FileName>show_text.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Text\show_text.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>net</GroupName>
+          <Files>
+            <File>
+              <FileName>esp8266.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Net\esp8266.c</FilePath>
+            </File>
+            <File>
+              <FileName>net_device.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Net\net_device.c</FilePath>
+            </File>
+            <File>
+              <FileName>net_system.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Net\net_system.c</FilePath>
+            </File>
+            <File>
+              <FileName>at_command.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Net\at_command\at_command.c</FilePath>
             </File>
           </Files>
         </Group>

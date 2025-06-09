@@ -22,7 +22,7 @@
  *  输出参数：无
  *  返回值：无
 */
-extern void EnableDebugIRQ(void);
+void EnableDebugIRQ(void);
 
 /*
  *  函数名：DisableDebugIRQ
@@ -31,6 +31,8 @@ extern void EnableDebugIRQ(void);
  *  输出参数：无
  *  返回值：无
 */
-extern void DisableDebugIRQ(void);
+void DisableDebugIRQ(void);
+
+void EnableUART3IRQ(void);
 
 #endif /* __DRIVER_USART_H */

@@ -6,4 +6,6 @@
 
 #define CONFIG_SUPPORT_HAL 1
 
+#define debug_printf printf
+
 #endif /* __CONFIG_H */
