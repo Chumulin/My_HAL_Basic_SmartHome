@@ -106,6 +106,14 @@ void USART1_IRQHandler(void)
     HAL_UART_IRQHandler(&huart1);   // HAL库中的UART统一中断服务函数，通过形参判断是要处理谁的中断
 }
 
+typedef void (*NetInputProcessCallback)(char c);
+static NetInputProcessCallback g_fNetInputProcessCallback;
+
+void SetNetInputProcessCallback(NetInputProcessCallback func)
+{
+    NetInputProcessCallback = func;
+}
+
 void USART3_IRQHandler(void)
 {
 	extern ring_buffer *GetUART3RingBuffer(void);
@@ -120,6 +128,10 @@ void USART3_IRQHandler(void)
     {
         c = USART3->DR;
         ring_buffer_write(c, uart3_ringbuffer);
+        if(g_fNetInputProcessCallback)
+        {
+            g_fNetInputProcessCallback(c);
+        }
     }
     HAL_UART_IRQHandler(&huart3);
 }
