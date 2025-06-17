@@ -111,7 +111,7 @@ static NetInputProcessCallback g_fNetInputProcessCallback;
 
 void SetNetInputProcessCallback(NetInputProcessCallback func)
 {
-    NetInputProcessCallback = func;
+    g_fNetInputProcessCallback = func;
 }
 
 void USART3_IRQHandler(void)

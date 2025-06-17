@@ -1,4 +1,11 @@
+#include <string.h>
 #include "input_system.h"
+#include "kal_time.h"
+#include "net_input.h"
+#include "input_buffer.h"
+
+typedef void (*NetInputProcessCallback)(char c);
+extern void SetNetInputProcessCallback(NetInputProcessCallback func);
 
 static char g_ESP8266DataBuff[INPUT_BUF_LEN];
 
@@ -26,11 +33,15 @@ static void ESP8266DataProcessCallback(char c)
 	{
 	case INIT_STATUS:
 	{
-		if (i == 5)
+		if (buf[0] != '+')
 		{
-			if (strncmp(buf, "+IPD,") == 0)
+			g_DataBuffIndex = 0;
+		}		
+		else if (i == 4)
+		{
+			if (strncmp(buf, "+IPD,", 5) == 0)
 			{
-				g_status == LEN_STATUS;
+				g_status = LEN_STATUS;
 			}
 			g_DataBuffIndex = 0;
 		}

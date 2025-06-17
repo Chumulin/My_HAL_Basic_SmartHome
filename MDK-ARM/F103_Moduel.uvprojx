@@ -633,6 +633,11 @@
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Input_System\input_system.c</FilePath>
             </File>
+            <File>
+              <FileName>net_input.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\Input_System\net_input.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

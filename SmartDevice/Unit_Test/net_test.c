@@ -3,6 +3,8 @@
 #include <string.h>
 #include "kal_time.h"
 #include "net_system.h"
+#include "input_system.h"
+#include "input_buffer.h"
 
 
 void net_test(void)
@@ -10,8 +12,7 @@ void net_test(void)
 	PNetDevice pNetDev;
 	char ip[20];
 	int port = 1234;
-	unsigned char data[200];
-	int len;
+	InputEvent event;
 
 	/* 等待2S, 等待ESP8266启动完毕 */
 	KAL_Delay(2000);
@@ -65,15 +66,29 @@ void net_test(void)
 		printf("Create Transfer err\r\n");
 		return;
 	}
+	AddInputDevices();
+	InitInputDevices();
 
 	while (1)
 	{
-		/* 读取网络数据 */
-		if (0 == pNetDev->Recv(pNetDev, data, &len, 100))
+		if (GetInputEvent(&event) == 0)
 		{
-			data[len] = '\0';
-			printf("Get NetData: %s\r\n", data);
-		}
+			if (event.eType == INPUT_EVENT_TYPE_KEY)
+			{
+				printf("get input event:\r\n");
+				printf("type: %d\r\n", event.eType);
+				printf("time: %d\r\n", event.time);
+				printf("key : %d\r\n", event.iKey);
+				printf("pressure : %d\r\n", event.iPressure);
+			}
+			else if (event.eType == INPUT_EVENT_TYPE_NET)
+			{
+				printf("get input event:\r\n");
+				printf("type: %d\r\n", event.eType);
+				printf("time: %d\r\n", event.time);
+				printf("str : %s\r\n", event.str);
+			}
+		} 
 	}
 		
 }
