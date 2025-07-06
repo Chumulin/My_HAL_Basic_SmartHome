@@ -11,6 +11,7 @@
 
 typedef struct LEDDevice{
 	int which;
+	int iStatus;
 	int (*Init)(struct LEDDevice *ptLEDDevice);
 	int (*Control)(struct LEDDevice *ptLEDDevice , int iStatus);
 	void (*SetColor)(struct LEDDevice *ptLEDDevice, int iColor);

@@ -22,7 +22,7 @@ static unsigned int GetPixelColorFromBitMap(PFontBitMap ptFontBitMap, int iX, in
     {
         byte += 8 + x;
     }
-    if(y > 8)
+    if(y >= 8)
     y -= 8;
     return *byte & (1<<y);
 }

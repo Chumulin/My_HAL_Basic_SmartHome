@@ -2,7 +2,7 @@
 #define __INPUT_SYSTEM_H
 
 #define TIME_T int
-#define INPUT_BUF_LEN 20
+#define INPUT_BUF_LEN 50
 
 typedef enum
 {

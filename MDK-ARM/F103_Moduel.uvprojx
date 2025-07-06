@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers;..\SmartDevice\CAL;..\SmartDevice\KAL;..\SmartDevice\Input_System;..\SmartDevice\Unit_Test;..\SmartDevice\Device;..\SmartDevice\Device\diaplay;..\SmartDevice\Config;..\SmartDevice\Font;..\SmartDevice\Text;..\SmartDevice\Net;..\SmartDevice\Net\at_command;..\SmartDevice\Device\uart</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;..\ModuleDrivers;..\SmartDevice\CAL;..\SmartDevice\KAL;..\SmartDevice\Input_System;..\SmartDevice\Unit_Test;..\SmartDevice\Device;..\SmartDevice\Device\diaplay;..\SmartDevice\Config;..\SmartDevice\Font;..\SmartDevice\Text;..\SmartDevice\Net;..\SmartDevice\Net\at_command;..\SmartDevice\Device\uart;..\SmartDevice\SmartHome</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -782,6 +782,31 @@
               <FileName>at_command.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SmartDevice\Net\at_command\at_command.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>smarthome</GroupName>
+          <Files>
+            <File>
+              <FileName>message.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\SmartHome\message.c</FilePath>
+            </File>
+            <File>
+              <FileName>message.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SmartDevice\SmartHome\message.h</FilePath>
+            </File>
+            <File>
+              <FileName>smarthome.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SmartDevice\SmartHome\smarthome.c</FilePath>
+            </File>
+            <File>
+              <FileName>smarthome.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\SmartDevice\SmartHome\smarthome.h</FilePath>
             </File>
           </Files>
         </Group>

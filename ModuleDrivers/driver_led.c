@@ -36,8 +36,12 @@ int HAL_LEDDeviceControl(struct LEDDevice *ptLEDDevice, int iStatus)
 	
 	if (!ptLEDDevice)
 		return -1;
+	if (iStatus == 2)
+		iStatus = !ptLEDDevice->iStatus;  /* 反转 */
 
 	pinstate = iStatus ? GPIO_PIN_RESET : GPIO_PIN_SET;
+	
+	ptLEDDevice->iStatus = iStatus; /* 修改当前状态 */
 	
 	switch (ptLEDDevice->which)
 	{

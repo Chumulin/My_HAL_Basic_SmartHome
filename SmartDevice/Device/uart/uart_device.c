@@ -3,13 +3,10 @@
 
 static ring_buffer g_UART3RingBuffer;
 
-
 ring_buffer *GetUART3RingBuffer(void)
 {
 	return &g_UART3RingBuffer;
 }
-
-
 
 static int UART3Init(struct UARTDevice *ptDev)
 {
@@ -17,18 +14,15 @@ static int UART3Init(struct UARTDevice *ptDev)
 	return 0;
 }
 
-
 static void UART3InvalidRecvBuf(struct UARTDevice *ptDev)
 {
 	g_UART3RingBuffer.pR = g_UART3RingBuffer.pW = 0;
 }
 
-
 static int UART3Write(struct UARTDevice *ptDev, char *Data, int iLen)
 {
 	return KAL_UART3Write(Data, iLen);
 }
-
 
 static int UART3ReadByte(struct UARTDevice *ptDev, char *Data)
 {
@@ -37,14 +31,12 @@ static int UART3ReadByte(struct UARTDevice *ptDev, char *Data)
 
 static UARTDevice g_tUART3Device = {
 	"uart3",
- 	UART3Init,
+	UART3Init,
 	UART3InvalidRecvBuf,
 	UART3Write,
-	UART3ReadByte 
-};
+	UART3ReadByte};
 
 PUARTDevice GetATInterfaceDevice(void)
 {
 	return &g_tUART3Device;
 }
-

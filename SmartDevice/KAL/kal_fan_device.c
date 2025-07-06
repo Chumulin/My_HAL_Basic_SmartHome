@@ -3,10 +3,7 @@
 
 
 
-int KAL_FanDeviceInit(struct FanDevice *ptFanDevice)
-{	
-	return CAL_FanDeviceInit(ptFanDevice);
-}
+
 
 
 int KAL_FanDeviceControl(struct FanDevice *ptFanDevice, int iSpeed)

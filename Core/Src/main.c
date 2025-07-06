@@ -29,6 +29,7 @@
 #include "fan_test.h"
 #include "text_test.h"
 #include "net_test.h"
+#include "smarthome.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -109,14 +110,16 @@ int main(void)
 	EnableDebugIRQ();
 	EnableUART3IRQ();
 	printf("Hello World!\r\n");
-  net_test();
+  //net_test();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	SmartHomeTask();
   while (1)
   {
     /* USER CODE END WHILE */
+    //SmartHomeTask();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

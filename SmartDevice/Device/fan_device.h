@@ -5,11 +5,9 @@ typedef struct FanDevice
 {
     int speed;
     int (*Init)(struct FanDevice *ptDev);
-    int (*Control)(struct FanDevice *ptDev , int ispeed);
-}FanDevice, *PFanDevice;
+    int (*Control)(struct FanDevice *ptDev, int ispeed);
+} FanDevice, *PFanDevice;
 
 PFanDevice GetFanDevice(void);
-
-
 
 #endif /* __FAN_DEVICE_H */

@@ -16,9 +16,9 @@ static int LEDDeviceControl(struct LEDDevice *ptLEDDevice, int iStatus)
 
 
 static LEDDevice g_tLEDDevices[] = {
-	{LED_WHITE, LEDDeviceInit, LEDDeviceControl},
-	{LED_BLUE,  LEDDeviceInit, LEDDeviceControl},
-	{LED_GREEN, LEDDeviceInit, LEDDeviceControl},
+	{LED_WHITE, 0, LEDDeviceInit, LEDDeviceControl},
+	{LED_BLUE, 0,  LEDDeviceInit, LEDDeviceControl},
+	{LED_GREEN, 0, LEDDeviceInit, LEDDeviceControl},
 };
 
 
